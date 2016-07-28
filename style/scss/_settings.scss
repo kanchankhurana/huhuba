@@ -1,0 +1,106 @@
+///* ============================================================================
+//   CSS settings(e.g. fonts, breakpoints, color, etc.)
+//   ========================================================================= */
+
+///**=================== BREAKPOINTS ===============================**/
+
+//$breakpoint-phone: 600 !default; // Mobile devices below 600px
+$breakpoint-tab: 640 !default; // Tablet small
+$breakpoint-laptop: 768 !default; // Tablet large
+
+$breakpoint-desktop: 960 !default; // laptop
+$breakpoint-thunderbolt: 1176 !default; // desktop
+
+
+///**===================  WRAPPER 0WIDTH ===============================**/
+//$width-phone: 600px !default;
+$width-tab: 768px !default;
+$width-laptop: 960px !default;
+$width-desktop: 1140px !default;
+$width-thunderbolt: 1920px !default;
+
+
+$border-default-radius: 4px !default;
+
+
+///*---------- Grid */
+$grid-col: 12 !default;
+$grid-gutter: 24px !default;
+
+
+///**=================== FONTS ===============================**/
+
+$font-family-base: 'Montserrat', sans-serif !default;
+
+// /*------------ Weight */
+$font-weight-thin: 100 !default;
+$font-weight-light: 300 !default;
+$font-weight-regular: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
+
+// /*------------ Size */
+$font-size-base: 16 !default;
+
+$font-size-h1: 48 !default; //56
+$font-size-h2: 36 !default; //36
+$font-size-h3: 30 !default;
+$font-size-h4: 24 !default;
+$font-size-h5: 18 !default;
+$font-size-h6: 16 !default;
+
+$font-size-p: 18;
+$font-size-small: 13 !default;
+
+
+// /*------- Line Height  */
+$line-height-base:18px !default;
+
+$line-height-xs:18px !default;
+$line-height-s:24px !default;
+$line-height-m:30px !default;
+$line-height-l:36px !default;
+$line-height-xxl:60px !default;
+
+
+
+///**=================== COLORS ===============================**/
+
+///*---------- Brand */
+
+$color-brand-primary: #ef534e !default; // Red
+$color-brand-secondary: #2dbaaa !default; // Green
+$color-brand-tertiary: #5ba4da !default; // Blue
+
+
+///*---------- Base */
+$color-black: #000 !default;
+$color-white: #fff !default;
+
+
+///*---------- Text */
+$color-text-primary: #333 !default; //80% black
+$color-text-secondary: #666 !default; //60% black
+$color-text-tertiary: #999 !default; // 40% black
+
+$color-divider: #8c8c8c !default; // 12% black
+
+///*---------- State */
+$color-state-error:   #dc322f !default;
+$color-state-success: #859900 !default;
+$color-state-warning: #b58900 !default;
+$color-state-information: #268bd2 !default;
+
+///*---------- Forms */
+
+$color-text-input-placeholder: #999 !default;
+
+///*----------- Margin  */
+$margin-default:6px !default;
+$margin-xs:12px !default;
+$margin-s:18px !default;
+$margin-m:24px !default;
+$margin-l:30px !default;
+$margin-xl:42px !default;
+$margin-xxl: 60px !default;
+$margin-xxxl: 72px !default;

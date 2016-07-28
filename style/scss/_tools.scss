@@ -1,0 +1,107 @@
+// All mixins, functions & other reusable tools
+
+///*=================== GRID MIXINS ========================*/
+
+// Create rows
+@mixin make-row($gutter: $grid-gutter) {
+  margin-left:  ($gutter / -2) ;
+  margin-right: ($gutter / -2);
+  //margin-bottom: $gutter;
+}
+
+//Common properties to all sizes grid columns
+@mixin make-all-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-s-#{$i}, .col-m-#{$i}, .col-l-#{$i}") {
+  @for $i from (1 + 1) through $grid-col {
+    $list: "#{$list}, .col-xs-#{$i}, .col-s-#{$i}, .col-m-#{$i}, .col-l-#{$i}";
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ceil(($grid-gutter / 2));
+    padding-right: floor(($grid-gutter / 2)) ;
+    // margin-bottom: 10px;
+  }
+}
+
+//Common properties for specific size screen
+@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+  @for $i from (1 + 1) through $grid-col {
+    $list: "#{$list}, .col-#{$class}-#{$i}";
+  }
+  #{$list} {
+    float: left;
+  }
+}
+
+//Calculating grid columns width & offset margin
+@mixin calc-grid-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-#{$class}-#{$index} {
+      width: percentage(($index / $grid-col));
+    }
+  }
+  @if ($type == offset) {
+    .col-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-col));
+    }
+  }
+}
+
+
+@mixin loop-grid-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-column($i, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid($class) {
+  @include loop-grid-columns($grid-col, $class, width);
+  @include loop-grid-columns($grid-col, $class, offset);
+}
+
+
+///*=================== UTILITY ========================*/
+
+@function to-em($size-px) {
+	@return ($size-px / $font-size-base) * 1em;
+}
+
+@function to-rem($size-px) {
+  $remSize: $size-px / $font-size-base;
+  @return #{$remSize}rem;
+}
+
+// Media queries mixin
+@mixin mq($point, $constraint: min, $feature: width) {
+  @media screen and (#{$constraint}-#{$feature}: $point / $font-size-base + em) {
+    @content;
+  }
+}
+
+// margin-mixin
+@mixin loop-margin(){
+
+}
+
+@mixin margin-all($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin padding-all($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin make-margin($class){
+  .margin-xs-on-tab{
+      @include margin-all($margin-xs, null, null, null);
+  }
+}

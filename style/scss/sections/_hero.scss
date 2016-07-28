@@ -1,0 +1,84 @@
+.hero {
+	background-color: #210e38;
+	background: url('../images/hero-bg.png') no-repeat;
+	background-size: cover;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	&__image {
+		// margin-top: 60px;
+		position: absolute;
+		height: 100vh;
+		width: 100%;
+		top: 60px;
+	}
+
+	&__content {
+		color: $color-white;
+		margin-top: 176px;
+		.content {
+			letter-spacing: 1px;
+		}
+	}
+
+	.logo {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+.section {
+	width: 100%;
+	margin-top: 95px;
+	position: relative;
+	overflow: hidden;
+}
+
+// Section 1 Personalised app
+.personalised-img {
+	background: url("../images/device-publish.png") no-repeat;
+  background-position: right center;
+  background-size: 692px;
+}
+
+.img-container.personalised-img {
+	left: 0
+} 
+
+// Section 2 Publish app
+.publish-img {
+	background: url("../images/publish-collage.png") no-repeat;
+  background-position: left center;
+  background-size: 692px;
+}
+
+.img-container.publish-img {
+	right: 0
+} 
+
+.img-container {
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	min-width: 1140px;
+} 
+
+
+
+
+
+.content-wrapper {
+	display: table;
+	height: 100vh;
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+		p {
+			max-width: 439px;
+		}
+		h2 {
+			margin-bottom: 12px;
+		}
+	}
+}

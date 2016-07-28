@@ -1,0 +1,128 @@
+
+/* =======================================================
+	GIRD CSS
+=======================================================*/
+.wrapper:before,
+.wrapper:after,
+.wrapper-fluid:before,
+.wrapper-fluid:after,
+.row:before,
+.row:after
+{
+  display: table;
+  content: " ";
+}
+
+.wrapper:after,
+.wrapper-fluid:after,
+.row:after
+{
+  clear: both;
+}
+
+.wrapper, .wrapper-fluid{
+	padding-right: $grid-gutter/ 2;
+	padding-left: $grid-gutter/ 2;
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+}
+
+.wrapper--nopad, .wrapper-fluid--nopad {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+
+
+@media (min-width: to-em($breakpoint-tab)) {
+	.wrapper {
+		max-width: $width-tab;   // 600-768px
+	}
+}
+@media (min-width: to-em($breakpoint-laptop)) {
+	.wrapper {
+		max-width: $width-laptop;   //768-960px
+	}
+}
+@media (min-width: to-em($breakpoint-desktop)) {
+	.wrapper {
+		max-width: $width-desktop;    //960-1140px
+	}
+}
+
+// @media (min-width: to-em($breakpoint-thunderbolt)) {
+// 	.wrapper {
+// 		max-width: $width-thunderbolt;    //1140----px
+// 	}
+// }
+
+.row {
+	@include make-row;
+}
+
+.row {
+
+	//Bottom gutter
+	&--bottom-gutter {
+		[class*="col-"] {
+			padding-bottom: 12px;
+			padding-top: 12px;
+		}
+	}
+
+	&--equal-height {
+		display: table;
+		// // review before commit
+		// width: 100%;
+
+		> [class*="col-"] {
+			display: table-cell;
+			float: none;
+			// // review before commit
+			vertical-align: top;
+		}
+	}
+
+	&--no-gutter {
+
+		margin-left:0;
+		margin-right: 0;
+
+		>[class*="col-"] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+/* ---- Common properties to all grid classes ---*/
+@include make-all-grid-columns;
+
+/* ---- Making grid classes for Palm held phones( < 600px ) ----*/
+@include float-grid-columns(xs);
+@include make-grid(xs);
+
+/* ---- Making grid classes for Tablets or phablets( > 600px ) ----*/
+@media (min-width: to-em($breakpoint-tab)) {
+	@include float-grid-columns(s);
+	@include make-grid(s);
+}
+
+/* ---- Making grid classes for laptop( > 768px ) ----*/
+@media (min-width: to-em($breakpoint-laptop)) {
+	@include float-grid-columns(m);
+	@include make-grid(m);
+}
+
+/* ---- Making grid classes for desktop( > 960px ) ----*/
+@media (min-width: to-em($breakpoint-desktop)) {
+	@include float-grid-columns(l);
+	@include make-grid(l);
+}
+
+// /* ---- Making grid classes for Extra Large devices( >1176px ) ----*/
+@media (min-width: to-em($breakpoint-thunderbolt)) {
+	@include float-grid-columns(xl);
+	@include make-grid(xl);
+}

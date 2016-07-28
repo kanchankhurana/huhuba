@@ -1,0 +1,37 @@
+/*================================= FLOAT =================================================*/
+.flt-left {
+	float: left !important;
+}
+.flt-right {
+  float: right !important;
+}
+
+/*================================= TEXT  =================================================*/
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+// Text Colors
+.text-color-primary {
+	color: $color-text-primary;
+}
+
+.text-color-tertiary {
+	color: $color-text-tertiary;
+}
+
+// Font-weights
+.font-weight-light {
+	font-weight: 100;
+}
+.font-weight-semibold {
+	font-weight: 600;
+}
+
+/*================================= SPACING =================================================*/
+.margin-bottom-s {
+	margin-bottom: 18px;
+}
+.margin-bottom-m {
+	margin-bottom: 24px;
+}
