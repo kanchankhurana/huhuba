@@ -13,20 +13,30 @@ html {
 
 @font-face {
    font-family: Montserrat;
-   src: url('fonts/montserrat/Montserrat-Black.otf');
+   src: url('../fonts/montserrat/Montserrat-Regular.otf');
+}
+
+@font-face {
+   font-family: Montserrat-light;
+   src: url('../fonts/montserrat/Montserrat-Light.otf');
+}
+
+@font-face {
+   font-family: Montserrat-ultralight;
+   src: url('../fonts/montserrat/Montserrat-UltraLight.otf');
 }
 
 
 body {
 	margin: 0;
-	font-family: Montserrat;
+	font-family: Montserrat-light;
 	font-size: to-em($font-size-base);
 }
 
 
-img {
-	width: 100%;
-}
+// img {
+// 	width: 100%;
+// }
 
 /*---------------Headings*/
 
@@ -77,6 +87,7 @@ a:focus, a:active {
 p {
 	font-size: to-em($font-size-p);
 	line-height: 30px;
+	font-family: Montserrat-ultralight;
 }
 
 b, strong {

@@ -58,14 +58,17 @@ html {
 
 @font-face {
   font-family: Montserrat;
-  src: url("fonts/montserrat/Montserrat-Black.otf"); }
+  src: url("../fonts/montserrat/Montserrat-Regular.otf"); }
+@font-face {
+  font-family: Montserrat-light;
+  src: url("../fonts/montserrat/Montserrat-Light.otf"); }
+@font-face {
+  font-family: Montserrat-ultralight;
+  src: url("../fonts/montserrat/Montserrat-UltraLight.otf"); }
 body {
   margin: 0;
-  font-family: Montserrat;
+  font-family: Montserrat-light;
   font-size: 1em; }
-
-img {
-  width: 100%; }
 
 /*---------------Headings*/
 h1,
@@ -111,7 +114,8 @@ a:focus, a:active {
 
 p {
   font-size: 1.125em;
-  line-height: 30px; }
+  line-height: 30px;
+  font-family: Montserrat-ultralight; }
 
 b, strong {
   font-weight: 700; }
@@ -649,27 +653,41 @@ hr {
   background-color: #210e38;
   background: url("../images/hero-bg.png") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   overflow: hidden;
   text-align: center; }
-  .hero__image {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    top: 60px; }
+  .hero__image img {
+    width: 284px; }
+    @media (min-width: 40em) {
+      .hero__image img {
+        width: 320px; } }
   .hero__content {
     color: #fff;
-    margin-top: 176px; }
+    margin: 18px 0 48px; }
     .hero__content .content {
       letter-spacing: 1px; }
+    .hero__content .sub-title {
+      font-family: Montserrat-ultralight; }
+  @media (min-width: 40em) {
+    .hero .title {
+      font-size: 36px;
+      line-height: 42px; }
+    .hero .sub-title {
+      font-size: 24px;
+      line-height: 30px; } }
+  @media (min-width: 48em) {
+    .hero .hero__content {
+      margin-top: 176px; }
+    .hero .hero__image {
+      margin-top: 70px; } }
   .hero .logo {
     width: 100px;
     height: 100px; }
 
 .section {
   width: 100%;
-  margin-top: 95px;
+  margin-top: 60px;
   position: relative;
   overflow: hidden; }
 

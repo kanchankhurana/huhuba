@@ -2,26 +2,55 @@
 	background-color: #210e38;
 	background: url('../images/hero-bg.png') no-repeat;
 	background-size: cover;
-	height: 100vh;
+	height: 80vh;
 	position: relative;
 	overflow: hidden;
 	text-align: center;
-	&__image {
-		// margin-top: 60px;
-		position: absolute;
-		height: 100vh;
-		width: 100%;
-		top: 60px;
-	}
 
-	&__content {
-		color: $color-white;
-		margin-top: 176px;
-		.content {
-			letter-spacing: 1px;
+	// Hero Image
+	&__image {
+		img {
+			width: 284px;
+			@media (min-width: to-em($breakpoint-tab)) {
+				width: 320px;
+			}
 		}
 	}
 
+	
+	// Hero Content
+	&__content {
+		color: $color-white;
+		margin: 18px 0 48px;
+		.content {
+			letter-spacing: 1px;
+		}
+		.sub-title {
+			font-family: Montserrat-ultralight;
+		}
+	}
+
+	@media (min-width: to-em($breakpoint-tab)) {
+		.title {
+			font-size: 36px;
+			line-height: 42px;
+		}
+		.sub-title {
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+
+	@media (min-width: to-em($breakpoint-laptop)) {
+		.hero__content {
+			margin-top: 176px;
+		}
+		.hero__image {
+			margin-top: 70px;
+		}
+	}
+	
+	// Huhuba Logo
 	.logo {
 		width: 100px;
 		height: 100px;
@@ -30,7 +59,7 @@
 
 .section {
 	width: 100%;
-	margin-top: 95px;
+	margin-top: 60px;
 	position: relative;
 	overflow: hidden;
 }
@@ -63,10 +92,6 @@
 	width: 100%;
 	min-width: 1140px;
 } 
-
-
-
-
 
 .content-wrapper {
 	display: table;
