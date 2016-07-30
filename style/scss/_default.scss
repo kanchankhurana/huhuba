@@ -78,10 +78,11 @@ h6 {
 a{
 	text-decoration: none;
 	color: #3978e2;
+	cursor: pointer;
 }
+
 a:focus, a:active {
 	outline: 0;
-	color: $color-brand-tertiary;
 }
 
 p {
@@ -97,52 +98,6 @@ b, strong {
 strike {
 	line-height: 18px;
 }
-
-table {
-	width: 100%;
-	background-color: $color-white;
-	border: 0;
-	border-radius: $border-default-radius;
-
-	thead {
-		border-bottom: 1px solid transparent;
-	}
-	tr:last-child td {
-		border-bottom: 0;
-	}
-	td, th {
-		font-size: to-em(12);
-		padding: 18px 12px 18px 18px;
-		text-align: left;
-	}
-	th {
-		color: $color-text-primary;
-		border-bottom: 1px solid $color-divider;
-		vertical-align: middle;
-	}
-	td {
-		color: $color-text-secondary;
-		padding-top: 25px;
-		padding-bottom: 20px;
-	}
-
-
-}
-
-/*--------------------------------- LISTS */
-ul, ol {
-	//font-size: to-em($font-size-p);
-	list-style: disc;
-	margin-left: 1em;
-	margin-right: 1em;
-}
-li {
-	line-height: 18px;
-}
-li + li {
-	margin-top: 12px;
-}
-
 
 hr {
 	border: none;

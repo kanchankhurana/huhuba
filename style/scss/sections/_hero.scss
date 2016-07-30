@@ -17,7 +17,6 @@
 		}
 	}
 
-	
 	// Hero Content
 	&__content {
 		color: $color-white;
@@ -28,11 +27,34 @@
 		.sub-title {
 			font-family: Montserrat-ultralight;
 		}
+		.download-app {
+			margin-top: 42px;
+		}
+		.playstore-icons {
+			a {
+				display: inline-block;
+				border: 1px solid $color-brand-primary;
+				padding: 6px 12px;
+				margin-right: 6px;
+				border-radius: 5px;
+				opacity: 0.8;
+				transition: all 0.25s ease;
+				&:hover {
+					opacity: 1;
+				}
+			}
+			.google-play {
+				padding: 6px 10px 6px 12px;
+			}
+			img {
+				height: 25px;
+			}
+		}
 	}
 
 	@media (min-width: to-em($breakpoint-tab)) {
 		.title {
-			font-size: 36px;
+			font-size: to-em($font-size-h2);
 			line-height: 42px;
 		}
 		.sub-title {
@@ -47,6 +69,9 @@
 		}
 		.hero__image {
 			margin-top: 70px;
+		}
+		.margin-bottom-laptop-reset {
+			margin-bottom: 0;
 		}
 	}
 	
@@ -72,8 +97,24 @@
 }
 
 .img-container.personalised-img {
-	left: 0
+	left: 0;
 } 
+
+
+// Features section
+.feature-image {
+	margin-bottom: 24px;
+	img {
+		height: 80px;
+		width: 80px;
+	}
+}
+.feature-content {
+	h4 {
+		margin-bottom: 12px;
+	}
+}
+
 
 // Section 2 Publish app
 .publish-img {
@@ -83,7 +124,7 @@
 }
 
 .img-container.publish-img {
-	right: 0
+	right: 115px;
 } 
 
 .img-container {
@@ -102,8 +143,52 @@
 		p {
 			max-width: 439px;
 		}
-		h2 {
+		h3 {
 			margin-bottom: 12px;
 		}
+	}
+}
+
+// footer
+.footer {
+	background-color: #f4f4f4;
+	padding: 24px;
+	text-align: center;
+	.connect {
+		color: $color-text-secondary;
+		margin-bottom: 6px;
+		font-size: 14px;
+		a {
+			color: $color-text-tertiary;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.social-group{
+		a{
+			display: block;
+	    border-radius: 50%;
+	    width: 30px;
+	    height: 30px;
+	    border: 1px solid $color-brand-primary;
+	    color: $color-brand-primary;
+	    opacity: 0.7;
+	    -o-transition: all 0.3s ease;
+	    -ms-transition: all 0.3s ease;
+	    -moz-transition: all 0.3s ease;
+	    -webkit-transition: all 0.3s ease;
+	    transition: all 0.3s ease;
+	    &:hover, &:focus{
+	    	text-decoration: none;
+		    opacity: 1
+	    }
+		}
+	}
+
+	.fa {
+		vertical-align: middle;
+		line-height: 1.8;
 	}
 }

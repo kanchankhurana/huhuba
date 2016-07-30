@@ -15,9 +15,19 @@
 .text-color-primary {
 	color: $color-text-primary;
 }
-
+.text-color-secondary {
+	color: $color-text-secondary;
+}
 .text-color-tertiary {
 	color: $color-text-tertiary;
+}
+.text-brand-primary {
+	color: $color-brand-primary;
+}
+
+// Text alignment
+.txt-center {
+	text-align: center;
 }
 
 // Font-weights
@@ -34,4 +44,18 @@
 }
 .margin-bottom-m {
 	margin-bottom: 24px;
+}
+.margin-bottom-l{
+	margin-bottom: 30px;
+}
+
+/*================================= LIST =================================================*/
+.list-inline {
+	margin: 0;
+  padding: 0;
+  list-style: none;	
+  li {
+		display: inline-block;
+		margin-right: 6px;
+  }
 }
